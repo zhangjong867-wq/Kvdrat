@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Практика: Билет №5</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Стили для практического задания */
+        .color-box {
+            /* 1. Создаем квадрат 100x100px */
+            width: 100px;
+            height: 100px;
+            
+            /* 2. Начальный цвет — красный */
+            background-color: red;
+            
+            /* 3. Плавный переход: свойство, длительность, функция плавности */
+            transition: background-color 2s ease;
+            
+            /* Эстетические дополнения */
+            border-radius: 12px;
+            cursor: pointer;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+
+        /* 4. Изменение цвета при наведении курсора */
+        .color-box:hover {
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 flex flex-col items-center justify-center min-h-screen p-4">
+
+    <div class="bg-white p-8 rounded-3xl shadow-xl border border-slate-200 text-center">
+        <h1 class="text-2xl font-bold text-slate-800 mb-2">Практическое задание</h1>
+        <p class="text-slate-500 mb-8 max-w-xs">
+            Наведите курсор на квадрат, чтобы увидеть плавную смену цвета за 2 секунды.
+        </p>
+
+        <div class="flex flex-col items-center gap-4">
+            <!-- Целевой элемент div -->
+            <div class="color-box" aria-label="Интерактивный квадрат"></div>
+            
+            <span class="text-xs font-mono text-slate-400 uppercase tracking-widest">
+                100 x 100 px
+            </span>
+        </div>
+    </div>
+
+    <footer class="mt-8 text-slate-400 text-sm italic">
+        Реализовано с использованием CSS transition
+    </footer>
+
+</body>
+</html>
