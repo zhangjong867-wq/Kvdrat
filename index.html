@@ -6,7 +6,6 @@
     <title>Практика: Билет №5</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        /* Стили для практического задания */
         .color-box {
             /* 1. Создаем квадрат 100x100px */
             width: 100px;
@@ -15,10 +14,12 @@
             /* 2. Начальный цвет — красный */
             background-color: red;
             
-            /* 3. Плавный переход: свойство, длительность, функция плавности */
+            /* 3. Плавный переход для ВСЕХ состояний. 
+               Так как transition здесь, а не в :hover, 
+               он работает и "туда" (в желтый), и "обратно" (в красный). */
             transition: background-color 2s ease;
             
-            /* Эстетические дополнения */
+            /* Эстетика */
             border-radius: 12px;
             cursor: pointer;
             box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
@@ -35,7 +36,7 @@
     <div class="bg-white p-8 rounded-3xl shadow-xl border border-slate-200 text-center">
         <h1 class="text-2xl font-bold text-slate-800 mb-2">Практическое задание</h1>
         <p class="text-slate-500 mb-8 max-w-xs">
-            Наведите курсор на квадрат, чтобы увидеть плавную смену цвета за 2 секунды.
+            Наведите на квадрат — станет желтым.<br>Уберите курсор — плавно вернется в красный.
         </p>
 
         <div class="flex flex-col items-center gap-4">
@@ -43,13 +44,13 @@
             <div class="color-box" aria-label="Интерактивный квадрат"></div>
             
             <span class="text-xs font-mono text-slate-400 uppercase tracking-widest">
-                100 x 100 px
+                2 секунды анимации
             </span>
         </div>
     </div>
 
     <footer class="mt-8 text-slate-400 text-sm italic">
-        Реализовано с использованием CSS transition
+        Реализовано: CSS transition (in/out)
     </footer>
 
 </body>
